@@ -1,0 +1,30 @@
+<svg width="360" height="300" viewBox="0 0 360 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+  </defs>
+  <g filter="url(#blur)" opacity="0.74">
+    <ellipse cx="108" cy="78" rx="74" ry="54" fill="#DBE8F1" />
+    <ellipse cx="272" cy="84" rx="70" ry="50" fill="#F2DDC4" />
+    <ellipse cx="264" cy="238" rx="66" ry="48" fill="#E8E1F5" />
+  </g>
+  <g opacity="0.46" stroke="#B89A63" stroke-width="2" stroke-linecap="round">
+    <path d="M24 118C72 100 104 68 150 67C194 66 222 99 261 105C294 111 324 103 347 88" />
+    <path d="M44 252C98 228 151 220 211 230C264 239 307 260 340 262" />
+  </g>
+  <g fill="#F6DEA2" stroke="#9A7B42" stroke-width="2">
+    <path d="M78 36L84 50L98 56L84 62L78 76L72 62L58 56L72 50L78 36Z" />
+    <path d="M292 40L297 52L309 57L297 62L292 74L287 62L275 57L287 52L292 40Z" />
+    <path d="M314 212L320 226L334 232L320 238L314 252L308 238L294 232L308 226L314 212Z" />
+  </g>
+  <path d="M106 180C122 138 158 114 204 114C252 114 292 142 305 188C315 223 301 258 268 274C237 289 190 290 155 279C109 264 88 228 106 180Z" fill="#FFF8EB" stroke="#B89A63" stroke-width="2.2" />
+  <path d="M125 206C163 188 211 185 286 198C284 237 259 266 225 278C182 293 120 282 107 231C104 220 108 213 125 206Z" fill="#D9B889" opacity="0.72" />
+  <path d="M171 174C171 160 178 148 189 143C200 138 214 139 224 147C235 155 239 168 236 181" stroke="#6F8E74" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M203 145C202 131 206 119 215 110C224 101 236 96 248 96C250 112 246 126 237 136C229 145 217 151 203 145Z" fill="#D8A2B0" stroke="#9A6771" stroke-width="2" />
+  <path d="M203 149C192 136 178 128 162 127C146 126 132 132 121 144C133 153 148 158 162 157C177 156 191 151 203 149Z" fill="#E7C996" stroke="#B89A63" stroke-width="2" />
+  <path d="M204 150C206 168 207 185 207 202C207 214 206 228 203 240" stroke="#6F8E74" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M207 176C221 173 234 176 244 185" stroke="#6F8E74" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M206 188C192 184 178 186 166 194" stroke="#6F8E74" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M175 118C170 126 167 135 167 144C167 171 181 195 205 213C229 195 243 171 243 144C243 135 240 126 235 118H175Z" stroke="#B9C7D5" stroke-width="3" />
+</svg>

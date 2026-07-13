@@ -1,0 +1,53 @@
+@import "./codex-uses.css";
+
+body {
+  background:
+    radial-gradient(circle at 15% 12%, rgba(174, 164, 209, 0.36), transparent 24%),
+    radial-gradient(circle at 82% 14%, rgba(217, 160, 170, 0.2), transparent 20%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0) 24%),
+    var(--bg-stars) center top / 760px 760px repeat,
+    var(--bg);
+}
+
+.codex-kicker {
+  color: #9b80c3;
+}
+
+.codex-panel {
+  background:
+    linear-gradient(155deg, rgba(174, 164, 209, 0.28), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0) 54%),
+    white;
+}
+
+.codex-panel span,
+.case-result > span,
+.prompt-head span {
+  color: #8c6bb3;
+}
+
+.use-card:nth-child(3n + 1) {
+  --track: #8f78bf;
+}
+
+.use-card:nth-child(3n + 2) {
+  --track: #6f97c7;
+}
+
+.use-card:nth-child(3n) {
+  --track: #d28a6e;
+}
+
+.weekly-grid article {
+  background:
+    linear-gradient(160deg, rgba(174, 164, 209, 0.18), transparent 48%),
+    white;
+}
+
+.source-row a:hover,
+.source-row a:focus-visible,
+.copy-prompt:hover,
+.copy-prompt:focus-visible {
+  background: var(--track);
+  border-color: var(--track);
+}

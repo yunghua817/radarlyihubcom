@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#f4ecda" />
+    <title>Vibe Coding 星圖｜後台管理</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,760&family=Noto+Sans+TC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/admin.css" />
+    <script src="/src/auth-config.js"></script>
+    <script src="/src/auth.js"></script>
+    <script>
+      window.VibeAuth?.requireAuth();
+    </script>
+    <script defer src="/src/admin.js"></script>
+  </head>
+  <body>
+    <main class="admin-page">
+      <header class="admin-topbar">
+        <a class="admin-brand" href="/?track=stars" aria-label="回到 Vibe Coding 星圖">
+          <span class="admin-brand-mark" aria-hidden="true"></span>
+          <span>Vibe Coding 星圖後台</span>
+        </a>
+        <nav class="admin-nav" aria-label="後台導覽">
+          <a href="/?track=stars">回首頁</a>
+          <a href="/skills.html">必裝 Skill</a>
+          <a href="/disclaimer.html">免責宣言</a>
+        </nav>
+      </header>
+
+      <section class="admin-hero" aria-labelledby="adminTitle">
+        <div>
+          <p class="admin-kicker">Admin Console</p>
+          <h1 id="adminTitle">使用者狀況</h1>
+          <p>追蹤每位使用者的登入入口、登入次數、瀏覽次數、首次使用、最後活動時間與最後瀏覽頁面。</p>
+        </div>
+        <button id="refreshUsers" class="admin-refresh" type="button">重新整理</button>
+      </section>
+
+      <section id="adminNotice" class="admin-notice" hidden></section>
+
+      <section id="adminLock" class="admin-lock" aria-label="後台密碼驗證">
+        <div>
+          <p class="admin-kicker">Password Gate</p>
+          <h2>輸入後台密碼</h2>
+          <p>請先完成後台密碼驗證，通過後才能讀取使用者狀況資料。</p>
+        </div>
+        <form id="adminPasswordForm" class="admin-password-form">
+          <label for="adminPasswordInput">後台密碼</label>
+          <div class="admin-password-row">
+            <input id="adminPasswordInput" type="password" inputmode="numeric" autocomplete="current-password" />
+            <button type="submit">解鎖後台</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-stats" aria-label="後台統計" data-admin-content hidden>
+        <article>
+          <span>使用者數</span>
+          <strong id="totalUsers">0</strong>
+        </article>
+        <article>
+          <span>今日活躍</span>
+          <strong id="activeToday">0</strong>
+        </article>
+        <article>
+          <span>總登入次數</span>
+          <strong id="totalLogins">0</strong>
+        </article>
+        <article>
+          <span>資料來源</span>
+          <strong id="storageMode">--</strong>
+        </article>
+      </section>
+
+      <section class="admin-table-shell" aria-label="使用者列表" data-admin-content hidden>
+        <div class="admin-table-head">
+          <h2>使用者列表</h2>
+          <p id="adminLoadedAt">尚未載入</p>
+        </div>
+        <div class="admin-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>使用者</th>
+                <th>入口</th>
+                <th>狀態</th>
+                <th>登入 / 瀏覽</th>
+                <th>首次 / 最後活動</th>
+                <th>最後頁面</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody">
+              <tr>
+                <td colspan="6">載入中...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

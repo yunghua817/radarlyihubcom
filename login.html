@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vibe Coding 星圖登入入口，支援 Google 帳號註冊與登入，並分流到智合科技、強合智慧與強茂集團入口。"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#f4ecda" />
+    <title>Vibe Coding 星圖｜企業登入入口</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,760&family=Noto+Sans+TC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/login.css" />
+    <script src="/src/auth-config.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script defer src="/src/auth.js"></script>
+    <script defer src="/src/login.js"></script>
+  </head>
+  <body>
+    <main class="login-shell">
+      <section class="login-stage" aria-label="企業登入入口">
+        <div class="login-copy">
+          <a class="login-brand" href="/?track=stars" aria-label="Vibe Coding 星圖首頁">
+            <span class="login-brand-mark" aria-hidden="true"></span>
+            <span>Vibe Coding 星圖</span>
+          </a>
+
+          <div class="login-copy-stack">
+            <p class="login-kicker">Google 帳號註冊 / 登入</p>
+            <h1>先選入口，再進入你的星圖工作臺</h1>
+            <p class="login-lede">
+              這是一個三入口企業登入頁。先選擇你要進入的公司入口，再用 Google 帳號完成註冊或登入，
+              系統會記住你的入口身分，回到站內時也會保留目前所屬入口。
+            </p>
+          </div>
+
+          <div class="story-cluster" aria-hidden="true">
+            <figure class="story-card story-card-traveler">
+              <img src="/src/assets/storybook-traveler.svg" alt="" />
+            </figure>
+            <figure class="story-card story-card-orbit">
+              <img src="/src/assets/storybook-orbit.svg" alt="" />
+            </figure>
+            <figure class="story-card story-card-bloom">
+              <img src="/src/assets/storybook-bloom.svg" alt="" />
+            </figure>
+          </div>
+
+          <div class="login-notes" aria-label="入口說明">
+            <article>
+              <span>入口分流</span>
+              <strong>智合科技 / 強合智慧 / 強茂集團</strong>
+              <p>登入前先選好入口，登入後會帶著入口身分進站。</p>
+            </article>
+            <article>
+              <span>帳號方式</span>
+              <strong>Google 帳號</strong>
+              <p>第一次使用視同註冊，之後同一個 Google 帳號可直接登入。</p>
+            </article>
+          </div>
+
+          <section class="brand-showcase" aria-label="品牌標識">
+            <div class="brand-showcase-head">
+              <span>Brand Constellation</span>
+              <strong>智合科技、強合智慧、強茂集團</strong>
+            </div>
+
+            <div class="brand-showcase-grid">
+              <a class="brand-card" href="https://www.zh-aoi.com/" target="_blank" rel="noreferrer">
+                <span class="brand-card-logo brand-card-logo-mark">
+                  <img src="/src/assets/logos/zhihe-logo.png" alt="智合科技 Logo" />
+                </span>
+                <span class="brand-card-copy">
+                  <strong>智合科技</strong>
+                  <small>智能解決方案專家</small>
+                </span>
+              </a>
+
+              <a class="brand-card" href="https://www.jvision-ai.com/src/landing.html" target="_blank" rel="noreferrer">
+                <span class="brand-card-logo brand-card-logo-wide">
+                  <img src="/src/assets/logos/jvision-logo-wordmark.png" alt="強合智慧 JVision Logo" />
+                </span>
+                <span class="brand-card-copy">
+                  <strong>強合智慧</strong>
+                  <small>JVision AI Solutions</small>
+                </span>
+              </a>
+
+              <a class="brand-card" href="https://www.panjit.com.tw/tw" target="_blank" rel="noreferrer">
+                <span class="brand-card-logo brand-card-logo-wide brand-card-logo-panjit">
+                  <img src="/src/assets/logos/panjit-logo-mark.png" alt="強茂集團 PANJIT Logo" />
+                </span>
+                <span class="brand-card-copy">
+                  <strong>強茂集團</strong>
+                  <small>PANJIT Group</small>
+                </span>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <section class="portal-console" aria-label="登入控制台">
+          <header class="portal-head">
+            <p class="portal-kicker">Portal Access</p>
+            <h2>選擇企業入口</h2>
+            <p>你可以先切換入口，再使用同一個 Google 帳號登入不同企業或集團工作區。</p>
+          </header>
+
+          <div class="portal-grid" role="list" aria-label="企業入口列表">
+            <button class="portal-card is-active" type="button" data-portal="zhihe">
+              <span class="portal-card-mark" aria-hidden="true"></span>
+              <span class="portal-card-eyebrow">Portal A</span>
+              <strong>智合科技入口</strong>
+              <p>適合進入智合科技的專案協作、知識整理與日常工作流程。</p>
+              <span class="portal-card-foot">Google 帳號登入</span>
+            </button>
+
+            <button class="portal-card" type="button" data-portal="qianghe">
+              <span class="portal-card-mark portal-card-mark-alt" aria-hidden="true"></span>
+              <span class="portal-card-eyebrow">Portal B</span>
+              <strong>強合智慧入口</strong>
+              <p>適合進入強合智慧的營運協作、任務節點與流程追蹤環境。</p>
+              <span class="portal-card-foot">Google 帳號登入</span>
+            </button>
+
+            <button class="portal-card" type="button" data-portal="panjit">
+              <span class="portal-card-mark portal-card-mark-panjit" aria-hidden="true"></span>
+              <span class="portal-card-eyebrow">Portal C</span>
+              <strong>強茂集團入口</strong>
+              <p>適合進入強茂集團的跨公司資源、集團資訊與協作管理環境。</p>
+              <span class="portal-card-foot">Google 帳號登入</span>
+            </button>
+          </div>
+
+          <section class="auth-panel" aria-label="Google 驗證區">
+            <div class="auth-summary">
+              <p class="auth-kicker">Selected Portal</p>
+              <h3 id="selectedPortalName">智合科技入口</h3>
+              <p id="selectedPortalDescription">
+                適合進入智合科技的專案協作、知識整理與日常工作流程。
+              </p>
+              <div class="auth-meta">
+                <span id="selectedPortalTag">Google 帳號註冊 / 登入</span>
+                <span id="portalDomainHint">目前未限制公司網域</span>
+              </div>
+            </div>
+
+            <div class="auth-actions">
+              <div id="googleButtonMount" class="google-button-mount" aria-live="polite"></div>
+              <p id="authStatus" class="auth-status">先確認入口，再使用 Google 帳號繼續。</p>
+              <div id="authConfigHint" class="auth-config-hint" hidden>
+                請先到 <code>/src/auth-config.js</code> 填入 Google Client ID，這個登入頁就能正式啟用。
+              </div>
+              <div class="auth-links">
+                <a href="/?track=stars">回到星圖首頁</a>
+                <a href="/skills.html">先看必裝 Skill</a>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
