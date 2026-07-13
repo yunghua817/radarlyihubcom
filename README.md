@@ -2,7 +2,7 @@
 
 JVision Demo 專案資料。
 
-- Demo: https://radarlyihubcom.vercel.app/
+- Demo: https://jvision-vibe-coding-radar.vercel.app/
 - 展示館 GitHub: https://github.com/yunghua817/radarlyihubcom
 
 
